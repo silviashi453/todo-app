@@ -36,9 +36,7 @@ export const TodoWrapper = () => {
   }, []);
 
   useEffect(() => {
-    if (todos.length > 0) {
-      localStorage.setItem("todos", JSON.stringify(todos)); // Save to localStorage
-    }
+    localStorage.setItem("todos", JSON.stringify(todos)); // Save to localStorage
   }, [todos]);
 
   const handleAddTodo = (todo) => {
